@@ -1,36 +1,43 @@
-//greedy least no of coins for change
 #include<stdio.h>
 #include<cs50.h>
-#include<math.h>
 int main(void)
 {
-    float n;
-    int coin=0;
+    int digit,notaltsum,m1,sum1,pos,check,counter,firsttwodigits;
+    sum1=0;notaltsum=0;pos=0;counter=0;
+    long int n;    // input number
+    n=get_long_long("Number: ");
     do
     {
-        n=get_float("Change owed: ");
-    }while(n<0);
-    n=round(n*100);
-    while(n>=25)
+        digit=n%10;
+        if(pos%2!=0)
+        {
+        m1=digit*2;
+        if(m1/10!=0)
+        sum1=sum1+(m1%10)+(m1/10);
+        else
+        sum1=sum1+m1;
+        }
+        else
+        notaltsum=notaltsum+digit;
+        n=n/10;
+        pos++;
+        if(pos==16&& digit==4)
+        counter=1;
+        if(n/10!=0)
+        firsttwodigits=n;
+    }while(n!=0);
+    check=sum1+notaltsum;
+    if(check%10==0 && pos>=13)
     {
-        n=round(n-25);
-        coin++;
+        if(firsttwodigits==34 || firsttwodigits==37)
+        printf("AMEX\n");
+        else if(firsttwodigits>50 && firsttwodigits<56)
+        printf("MASTERCARD\n");
+        else if(firsttwodigits/10==4)
+        printf("VISA\n");
+        else
+        printf("INVALID\n");
     }
-    while(n>=10)
-    {
-        n=round(n-10);
-        coin++;
-    }
-    while(n>=5)
-    {
-        n=round(n-5);
-        coin++;
-    }
-    while(n>=1)
-    {
-        n=round(n-1);
-        coin++;
-    }
-    printf("%d\n",coin);
-
+    else
+    printf("INVALID\n");
 }
