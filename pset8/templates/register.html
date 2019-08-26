@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+        <form action="/register" method="post" id="register" onsubmit="return check()">
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" id="username" type="text" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="password" placeholder="Password" type="password" id="password" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="confirmation" placeholder="Enter Password again" type="password" id="confirmation" required>
+            </div>
+            <button class="btn btn-primary" type="submit" value="submit">Register</button>
+        </form>
+            <script>
+            $(document).ready(function()
+            {
+                document.getElementById("register").addEventListener("submit",function(e)
+                {
+                    e.preventDefault();
+                    let username=document.getElementById("username");
+                    $.get('/check?username='+ username.value,function(tf)
+                    {
+                        if (tf){
+                        document.getElementById("register").submit();}
+                        else{
+                        alert("Username Not Available!")}
+                    });
+                });
+            });
+        </script>
+        <script>
+            function check()
+            {
+                var pass1=document.getElementById("password").value;
+                var pass2=document.getElementById("confirmation").value;
+                var bool=true;
+                if(pass1!=pass2)
+                {
+                    document.getElementById("password").style.border="2px solid red";
+                    document.getElementById("confirmation").style.border="2px solid red";
+                    bool=false;
+                }
+                else
+                {
+                    alert("Passwords Match!!")
+                    bool=true;
+                }
+                return bool;
+            }
+        </script>
+{% endblock %}

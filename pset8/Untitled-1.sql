@@ -1,0 +1,2 @@
+-- SQLite
+CREATE TABLE 'Portfolio' ('Id' integer PRIMARY KEY AUTOINCREMENT NOT NULL,'UserId' integer NOT NULL,'Date&Time' timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,'Company'varchar(100) NOT NULL,'Symbol' varchar(100) NOT NULL,'Action' char(10) NOT NULL,'Value' numeric(9,4) NOT NULL, 'Shares' integer NOT NULL,'TotalValue' numeric(9,4) NOT NULL );

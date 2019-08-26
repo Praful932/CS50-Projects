@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block title %}
+Index
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped table-dark">
+    <thead>
+        <th>Symbol</th>
+        <th>Company</th>
+        <th>Shares</th>
+        <th>Price</th>
+        <th>TotalValue</th>
+    </thead>
+    <tbody>
+        {% for row in info %}
+        <tr>
+            {% if row['sum(Shares)'] %}
+            <td>{{row['Symbol']}}</td>
+            <td>{{row['Company']}}</td>
+            <td>{{row['sum(Shares)']}}</td>
+            <td>{{row['Price']}}</td>
+            <td>{{row['TotalPrice']}}</td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+        <tr>
+        <th>CASH</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>{{dollars}}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <td colspan="4"></td>
+        <td>{{tv}}</td>
+    </tfoot>
+</table>
+{% endblock %}
