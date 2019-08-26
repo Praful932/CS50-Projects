@@ -1,0 +1,27 @@
+body
+{
+    /*use a light white combo in linear gradient to create a white gradient over the bgimg */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255,255,255,0.4)), url('../static/op.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+#mb
+{
+    display: inline;
+    cursor: pointer;
+}
+label
+{   
+   padding:10px;
+}
+.val
+{
+    margin-left: 25px;
+}
+.invalid-feedback
+{
+    font-weight: 700;
+}
+

@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+<h1 class="mb-3" style="margin-left:25px">One Piece Poll</h1>
+
+<!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+<form action="/form" class="needs-validation" novalidate method="post">
+    <h3 style="margin-left:25px">Pirate Name:</h3>
+    <div><input name="pname" type="text" class="form-control" id="name" placeholder="Your Pirate Name here"
+            style="width:400px;margin-left:25px" required autofocus>
+        <div class="invalid-feedback val">
+            Please Provide a valid Name
+        </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <select name="favselect" class="form-control custom-select" placeholder="Favourite Character"
+            style="width:200px; margin-left:25px" required>
+            <option selected disabled value="">Vote</option>
+            <option value="Luffy">Luffy</option>
+            <option value="Zoro">Zoro</option>
+            <option value="Sanji">Sanji</option>
+            <option value="Jinbei">Jinbei</option>
+            <option value="Nami">Nami</option>
+            <option value="Robin">Robin</option>
+            <option value="Usopp">Usopp</option>
+            <option value="Brook">Brook</option>
+            <option value="Franky">Franky</option>
+            <option value="Chopper">Chopper</option>
+            <option value="Ace">Ace</option>
+            <option value="Sabo">Sabo</option>
+        </select>
+        <div class="invalid-feedback val">Vote for your favorite character</div>
+    </div>
+    <br>
+    <h2 style="font-family:'Courgette', cursive; margin-left:25px">Ahoy there matey! Choose your favourite lady</h2><br>
+    <div id="mb">
+        <input type="radio" id="h" value="Hancock" name="mb" required>
+        <label for="h"><img src="static/hancock.jpg" class="img-thumbnail" alt="hancock"></label>
+        <input type="radio" id="s" value="Shirahoshi" name="mb" required>
+        <label for="s"><img src="static/shirahoshi.png" class="img-thumbnail" alt="shirahoshi"></label>
+        <input type="radio" id="n" value="Nami" name="mb" required>
+        <label for="n"><img src="static/nami.jpeg" class="img-thumbnail" alt="nami"></label>
+        <div class="invalid-feedback val radio">Pick One!</div>
+    </div>
+    <br><br>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+    <button class="btn btn-primary" type="submit" style="margin-left:25px">Submit</button>
+
+</form>
+
+<script>// Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        if ($('input.Check[name=mb]:checked').length < 1) {
+                            $(".img-thumbnail").css('outline', '1px solid red');
+                            $(".radio").show();
+                        }
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Pirate Name:</th>
+            <th scope="col">Fav Character</th>
+            <th scope="col">Fav Lady</th>
+        </tr>
+    </thead>
+    {% for info in records %}
+    <tr>
+        <!--Print info 0,1,2 because appending each record will be on new row so 0 will give 1st data out of 3-->
+        <td>{{info[0]}}</td>
+        <td>{{info[1]}}</td>
+        <td>{{info[2]}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
