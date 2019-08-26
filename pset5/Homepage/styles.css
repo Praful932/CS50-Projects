@@ -1,0 +1,77 @@
+.header {
+      text-align: center;
+      padding: 5px;
+      background-color: #222;
+      font-family: "Indie Flower";
+      color: #F5F1ED;
+      font-size: 53px;
+    }
+
+.name
+{
+    font-size:37px;
+    font-family: 'Kaushan Script', cursive;
+}
+a {
+    font-family: "Macondo Swash Caps";
+    font-size: 17px;
+  }
+  
+body {
+      background-image: url("homepage.jpg");
+      background-size: cover;
+      background-position: 0 20px;
+     }
+ .typewriter {
+      font-family: 'Roboto Mono', monospace;
+      display: inline-block;
+      align-content: center;
+     }
+
+.typewriter-text {
+   display: inline-block;
+  	overflow: hidden;
+  	letter-spacing: 2px;
+ 	animation: typing 5s steps(30, end), blink .75s step-end infinite;
+    white-space: nowrap;
+    font-size: 30px;
+    color: #CCDAD1;
+    font-weight: 700;
+    border-right: 4px solid orange;
+    box-sizing: border-box;
+}
+
+.clearfix
+{overflow: auto;}
+#content
+{
+    color:#0634fffd;
+    font-size: 20px;
+}
+
+#roundedcorners
+{
+    border-radius: 12px;
+}
+
+.container
+{
+    background-color:red;
+}
+@keyframes typing {
+    from { 
+        width: 0% 
+    }
+    to { 
+        width: 100% 
+    }
+}
+
+@keyframes blink {
+    from, to { 
+        border-color: transparent 
+    }
+    50% { 
+        border-color: orange; 
+    }
+}
