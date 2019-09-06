@@ -1,34 +1,40 @@
-# Harvard CS50 - Assignments
-A collection of assignments done as part of the CS50 course.
+# Harvard's CS50x Course - Assignments
 
 ### Problem Set 0
-* **Scratch** - Implement a game in Scratch.
+* **Scratch** - A game implemented in Scratch, Can be accessed [here](https://scratch.mit.edu/projects/319099756/).
 
 ### Problem Set 1
-* **Hello** - Self-explanatory "Hello World" program.
-* **Water** - Simple input/output program that calculates equivalent water bottles used during shower X minutes long.
-* **Mario** - Generates end-of-level Mario pyramids using loops.
+* **Hello** - "Hello World" Program.
+* **Mario** - Two Versions(less and more comfortable).Progam to Print Pyramid like Mario Pattern.
+* **Cash** - Given a number, output the minumum number of coins it could take(Greedy Algorithm).
 * **Credit** - Given a number, determines whether input is a valid credit card number (using Lugn's algorithm) and it's type.
 
 ### Problem Set 2
-* **Initials** -  Given the input of a name, program prints out the corresponding initials.
-* **Vigenere** - Takes a commandline argument as a key and then encrypts an input using the Vigenere cypher.
-* **Crack** - Incredibly rudimentary 4 alpha character password cracker which simply genetates passwords and compares hashes.
+* **Caesar** -  Given a key(number), encrypt the input given as a commandline argument.
+* **Vigenere** - Given a key(string), encrypt the input given as a commandline argument.
+* **Crack** - Crack a max 5 letter password, given its input hash.
 
 ### Problem Set 3
-* **Find** -  Implements Counting Sort and Binary Search to find a given value in an array.
-* **Fifteen** - Implements the [15 puzzle](https://en.wikipedia.org/wiki/15_puzzle).
+* **Whodunit** - Discover the hidden message in the image by changing all red pixels to white pixels.
+* **Resize(less)** - Resize a bitmap image by a factor of n to reduce its size.
+* **Recover** - Iterate over raw memory of data and extract images.
 
 ### Problem Set 4
-* **Whodunit** - Iterates over a bitmap file, changes all red pixels to white ones, in order to discover the hidden message.
-* **Resize** - Takes an input bitmap, and a float as a parameters, and creates a new bitmap scaled in dimensions by the float value.
-* **Recover** - Can look over a raw binary dump of data, finding and extracting block-aligned jpeg images. Used for recovery.
+* **Speller** - Two Spell Checker programs implemented using Hashtable and Trie.
 
 ### Problem Set 5
-* **Speller** - Implements a spell checking program. Two versions: chained hash table, and trie.
+* **Homepage** - Design a simple Website using HTMlL,CSS and Bootstrap. Can be accessed [here](https://praful932.cs50.site/).
 
 ### Problem Set 6
+* **Hello.py** - Re-implementation of Hello from pset1 using Python
 * **Mario.py** - Re-implementation of Mario from pset1 using Python.
-* **Credit.py** - Re-implementation of Credit from pset1 using Python. Features list comprehension.
-* **Crack.py** - Re-implementation of Crack from pset2 using Python. Features list comprehension.
-* **Sentiments** - Implements necessary python programs to analyze tweets, rate for sentiment, and allow usage through simple web application.
+* **Credit.py** - Re-implementation of Credit from pset1 using Python. 
+* **Crack.py** - Re-implementation of Crack from pset2 using Python. 
+* **Bleep.py** - Implement a program to censor a list of banned words in a given message as input.
+
+### Problem Set 7
+* **Similarites** - Implemented a Web App that compares for similarites across files.
+* **Survey** - A Web App that takes a survey and stores the submissions in a csv file.
+
+### Problem Set 8
+* **Finance** - A Website where users can buy and sell stocks.
